@@ -1,0 +1,23 @@
+ .thumnails{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .list-thumbnail{
+      height: 100%;
+      white-space: nowrap;
+      .img-thumb{
+        display: inline-block;
+        border: 1px solid #ddd;
+        padding: 3px;
+        width: 100px;
+        height: 100px;
+        margin:0 2px 0 0; 
+      }
+      .selected-img{
+        border: 2px solid ;
+      }
+    }
+  }
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
+   

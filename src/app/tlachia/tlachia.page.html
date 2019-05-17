@@ -1,0 +1,67 @@
+<ion-content>
+  <ion-toolbar>
+      <ion-searchbar placeholder="Recherche" [(ngModel)]="global.searchText" (ionChange)="global.searchChange($event.target.value)"></ion-searchbar>
+  </ion-toolbar>
+  <ion-item lines="none">
+    <ion-label>Mode</ion-label>
+    <ion-select placeholder="Choisir" [(ngModel)]="tlachiaMode">
+      <ion-select-option value="0">Codex</ion-select-option>
+      <ion-select-option value="1">Planche</ion-select-option>
+      <ion-select-option value="2">Glyphes/Personnages</ion-select-option>
+      <ion-select-option value="3">Eléments</ion-select-option>
+      <ion-select-option value="4">Valeurs</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div>
+    Codex
+    <div class="thumnails">
+      <div class="list-thumbnail">
+        <div class="img-thumb" *ngFor="let user of users">
+          <div>{{ user.name?.first }}</div>
+          <img width="75" height="75" [src]="user.picture.medium"/>
+        </div>
+      </div>
+    </div>      
+  </div>
+  <div>
+    Planches
+    <div class="thumnails">
+      <div class="list-thumbnail">
+        <div class="img-thumb" *ngFor="let user of users">
+          <div>{{ user.name?.first }}</div>
+          <img width="75" height="75" [src]="user.picture.medium"/>
+        </div>
+      </div>
+    </div>      
+  </div>
+
+<!-- 
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img [src]="user.picture.medium">
+          </ion-avatar>
+          <h2 text-capitalize>{{ user.name?.first }} {{ user.name?.last }}</h2>
+        </ion-item>
+        <ion-card-content>
+          {{ user.email }}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+
+    <ion-infinite-scroll (ionInfinite)="loadMore($event)" loadingSpinner="bubbles" loadingText="Loading Users...">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+  
+  </ion-list> -->
+
+       
+      
+
+      
+
+  </ion-content>
+  

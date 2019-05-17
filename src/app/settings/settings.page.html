@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="goPrevious()">
+        <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+    </ion-buttons>
+    <ion-title text-center>settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Langue</ion-label>
+        <ion-select placeholder="Choisir">
+          <ion-select-option value="es">Espagnol</ion-select-option>
+          <ion-select-option value="fr">Français</ion-select-option>
+          <ion-select-option value="en">Anglais</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
